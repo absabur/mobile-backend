@@ -15,15 +15,15 @@ exports.createSpecs = async (req, res, next) => {
     if (!req.body.categoryValue) {
       throw createError(400, "category is required");
     }
-    if (!req.body.placeholder) {
-      throw createError(400, "Specs placeholder is required");
-    }
-    if (!req.body.label) {
-      throw createError(400, "label is required");
-    }
-    if (!req.body.multiple) {
-      throw createError(400, "multiple is required");
-    }
+    // if (!req.body.placeholder) {
+    //   throw createError(400, "Specs placeholder is required");
+    // }
+    // if (!req.body.label) {
+    //   throw createError(400, "label is required");
+    // }
+    // if (!req.body.multiple) {
+    //   throw createError(400, "multiple is required");
+    // }
 
     const category = await Category.findById(req.body.categoryId);
     if (!category) {

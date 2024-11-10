@@ -6,11 +6,10 @@ const Category = require("../models/categoryModel.js");
 const Specs = require("../models/specificationNameModel.js.js");
 const { createSlug } = require("../utils/createSlug.js");
 
-const { ObjectId } = require("mongoose").Types;
-
 exports.createPhone = async (req, res, next) => {
   try {
     let { name, price, brand, specifications } = req.body;
+    console.log(req.body);
     if ((!name || !price || !brand, !specifications)) {
       throw createError(400, "All fields are required");
     }
@@ -114,7 +113,6 @@ exports.getAllPhones = async (req, res, next) => {
     // Construct the filter object for the query
     const filter = conditions.length > 0 ? { $and: conditions } : {};
 
-    // Query the phones collection
     const phones = await Phone.find(filter);
 
     if (!phones || phones.length === 0) {

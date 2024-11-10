@@ -28,6 +28,6 @@ const filterValueSchema = new Schema(
   { timestamps: true }
 );
 
-const FilterValue = model("FilterValue", filterValueSchema);
+const FilterValue = model("FilterValue10", filterValueSchema);
 
 module.exports = FilterValue;

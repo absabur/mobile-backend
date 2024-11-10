@@ -20,7 +20,7 @@ phoneRouter.get("/compare", comparePhone);
 
 phoneRouter.get("/:slug", getPhone);
 
-phoneRouter.post("/new", isLoggedIn, isAdmin, createPhone);
+phoneRouter.post("/new", createPhone);
 
 phoneRouter.put("/:id([0-9a-fA-F]{24})", isLoggedIn, isAdmin, updatePhone);
 

@@ -77,6 +77,6 @@ const phoneSchema = new Schema(
 );
 phoneSchema.index({ "specifications.specs.filterValues.filterId": 1 });
 phoneSchema.index({ "brand.id": 1 });
-const Phone = model("Phone", phoneSchema);
+const Phone = model("Phone10", phoneSchema);
 
 module.exports = Phone;

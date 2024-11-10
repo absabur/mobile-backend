@@ -26,6 +26,6 @@ const specificationNameSchema = new Schema(
   { timestamps: true }
 );
 
-const Specs = model("Specs", specificationNameSchema);
+const Specs = model("Specs10", specificationNameSchema);
 
 module.exports = Specs;

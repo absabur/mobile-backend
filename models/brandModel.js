@@ -21,6 +21,6 @@ const brandSchema = new Schema(
   { timestamps: true }
 );
 
-const Brand = model("Brand", brandSchema);
+const Brand = model("Brand10", brandSchema);
 
 module.exports = Brand;
